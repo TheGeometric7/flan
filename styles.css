@@ -1,0 +1,268 @@
+:root {
+    --primary: #E67E22;
+    --primary-light: #F39C12;
+    --secondary: #16A085;
+    --text: #34495E;
+    --text-light: #7F8C8D;
+    --bg: #FDF2E9;
+    --card-bg: #FFFFFF;
+    --border: #D5DBDB;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] {
+    --primary: #D35400;
+    --primary-light: #E67E22;
+    --secondary: #1ABC9C;
+    --text: #ECF0F1;
+    --text-light: #BDC3C7;
+    --bg: #2C3E50;
+    --card-bg: #34495E;
+    --border: white;
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, fill 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    padding-top: 90px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px var(--shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo svg {
+    height: 50px;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+button {
+    background-color: var(--primary-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: white;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background-color: var(--secondary);
+}
+
+button svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+}
+
+.recipe-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow);
+    overflow: hidden;
+    margin: 30px 0;
+    padding: 40px;
+}
+
+.recipe-meta {
+    display: flex;
+    gap: 30px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.recipe-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.recipe-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 400px;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+.recipe-details {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    min-width: 300px;
+}
+
+.detail {
+    background-color: var(--bg);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px var(--shadow);
+}
+
+.detail h3 {
+    border-bottom: none;
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.detail p {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+h2, h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary);
+}
+
+h3 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ingredients-section, .tools-section, .instructions-section {
+    margin: 35px 0;
+}
+
+ul, ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.instructions-section li {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed var(--border);
+}
+
+.step-image {
+    width: 60%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+    
+    .recipe-meta {
+        flex-direction: column;
+    }
+    
+    .recipe-image, .recipe-details {
+        min-width: 100%;
+    }
+    
+    .recipe-card {
+        padding: 25px;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+}
+
+#credit-text a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+#credit-text a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}

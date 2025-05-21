@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta de Flan | Flan Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="flan-logo.svg">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+                    <path d="M15 70 Q50 90 85 70 L80 20 Q50 10 20 20 Z" fill="none" stroke="white" stroke-width="5"/>   
+                </svg>
+                <h1>Receta De Flan</h1>
+            </div>
+            <div class="controls">
+                <button id="theme-toggle" aria-label="Toggle dark mode">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"/>
+                    </svg>
+                </button>
+                <button id="language-toggle" aria-label="Language Toggle">
+                    <span>ES/EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="recipe-card">
+            <h2 id="recipe-title">Flan Clásico</h2>
+            
+            <section class="recipe-meta">
+                <div class="recipe-image">
+                    <img src="images/flan-final.jpg" alt="Flan terminado" class="recipe-main-image">
+                </div>
+                <div class="recipe-details">
+                    <div class="detail">
+                        <h3 id="prep-time">Tiempo de Preparación</h3>
+                        <p>20 minutos</p>
+                    </div>
+                    <div class="detail">
+                        <h3 id="cook-time">Tiempo de Cocción</h3>
+                        <p>1 hora</p>
+                    </div>
+                    <div class="detail">
+                        <h3 id="servings">Porciones</h3>
+                        <p>8</p>
+                    </div>
+                    <div class="detail">
+                        <h3>Dificultad</h3>
+                        <p>Fácil</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ingredients-section">
+                <h3 id="ingredients-title">Ingredientes</h3>
+                <ul id="ingredients-list">
+                    <li>1 taza de azúcar blanca</li>
+                    <li>3 huevos grandes</li>
+                    <li>1 lata (14 oz) de leche condensada azucarada</li>
+                    <li>1 lata (12 oz) de leche evaporada</li>
+                    <li>1 cucharada de extracto de vainilla</li>
+                </ul>
+            </section>
+
+            <section class="tools-section">
+                <h3 id="tools-title">Utensilios Necesarios</h3>
+                <ul id="tools-list">
+                    <li>Molde redondo de vidrio de 9 pulgadas</li>
+                    <li>Cacerola mediana</li>
+                    <li>Tazón grande para mezclar</li>
+                    <li>Batidor o batidora eléctrica</li>
+                    <li>Bandeja para hornear honda</li>
+                    <li>Rejilla para enfriar</li>
+                </ul>
+            </section>
+
+            <section class="instructions-section">
+                <h3 id="instructions-title">Instrucciones</h3>
+                <ol id="instructions-list">
+                    <li>
+                        <p>Precaliente el horno a 350°F (175°C).</p>
+                        <img src="images/oven-preheat.jpg" alt="Horno precalentándose" class="step-image">
+                    </li>
+                    <li>
+                        <p>Derrita el azúcar en una cacerola a fuego medio-bajo hasta que quede líquida y dorada. Vierte con cuidado el caramelo caliente en un molde de vidrio redondo de 9 pulgadas, gíralo para cubrir el fondo y reserva.</p>
+                        <img src="images/caramel-making.jpg" alt="Haciendo caramelo" class="step-image">
+                    </li>
+                    <li>
+                        <p>Bate los huevos en un tazón grande. Incorpora la leche condensada, la leche evaporada y la vainilla; mezcla bien hasta que todo esté homogéneo. Vierte la mezcla sobre el caramelo en el molde.</p>
+                        <img src="images/mixing-ingredients.jpg" alt="Mezclando ingredientes" class="step-image">
+                    </li>
+                    <li>
+                        <p>Colócalo en una bandeja para hornear honda y agrega agua caliente hasta cubrir 1 pulgada del molde.</p>
+                        <img src="images/flan-mold.jpg" alt="Baño maría para flan" class="step-image">
+                    </li>
+                    <li>
+                        <p>Hornea por 1 hora (revisa a los 55 minutos). Recuerda que el flan seguirá cuajando al enfriarse. Sácalo del horno y deja enfriar a temperatura ambiente.</p>
+                        <img src="images/baking-flan.jpg" alt="Flan horneándose" class="step-image">
+                    </li>
+                    <li>
+                        <p>Para servir, desmolda: Pasa un cuchillo por los bordes, invierte el flan sobre un plato y déjalo caer suavemente. ¡No apresures!</p>
+                        <img src="images/serving-flan.jpg" alt="Flan servido" class="step-image">
+                    </li>
+                </ol>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p id="footer-text">2025 Receta de Flan</p>
+            <p id="credit-text">Inspirado por <a href="https://www.allrecipes.com/recipe/20979/spanish-flan/" target="_blank">esta receta</a>.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
